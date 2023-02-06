@@ -7,7 +7,7 @@ CPD is a task that requires models to demonstrate proficiency in both visual obj
 TL;DR the dataset consists of instances of image-text pairs (two images and two captions) with bounding boxes for each phrase present in each of the images. The image pairs are contextually related, but partially contradictory: while images and text pairs have semanitc similarities, the phrases or objects in each sentence are only present in one of the images. Crucially, this means there are confirmed negatives in this dataset, allowing for a true dual classification and localization task. For a model to perform well it must refrain from predicting bounding boxes when an object is not present. For a more detailed discussion of the dataset design please see how our paper.
 
 ## Sub-tasks
-We propose two variations on the CPD task: a grounding formaulation and a VQA formulation. 
+We propose two variations on the CPD task:
 
 * **CPD Grounding** : Similar to phrase grounding, for CPD grounding, a model must make bounding box predictions for all annotated phrases within an image caption. 
 * **CPD VQA** :  This formulation is quite straightforward; a system must simply answer whether or not certain objects or scenes are present in a given image.
