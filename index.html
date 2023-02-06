@@ -116,7 +116,21 @@ layout: default
                 <div class="col-xl-12">
 		     <center>
                      <image src="assets/teaser1.png" class="img-fluid" alt="Teaser figure"><br>
-                        <h2>
+                      Current state of the art VQA systems while displaying impressive performance on popular benchmarks, often fail when evaluated on challenging images such as those shown above. We propose a novel task titled "Contextual Phrase Detection" which evaluates models' fine-grained vision and language understanding capabilities along with a human-labelled dataset (TRICD) that enables evaluation on this novel task. 
+			
+			 <div class="col-xl-12">
+                <p class="text-justify">
+                    <center><b>TL;DR </center>
+                    <ul>
+                     <li> What is Contextual Phrase Detection (CPD)? : A single task that subsumes object detection, phrase grounding and visual question answering, in which the model must use full context from the given sentence, decide whether this sentence holds true for the given image, and if so, return bounding boxes for all relevant objects referred to in the sentence.</li>
+                     <li> How is our dataset (TRICD) different from other benchmarks? : We manually curate image-text pairs with bounding boxes for each of the phrases present in the image. The pairs are contextually related, but partially contradictory; i.e. while the images and texts are semantically similar, each sentence is only depicted in one of the images, but not the other. We manually verify and ensure the negatives.  
+		     <li> But is it really that much harder than existing classification and grounding benchmarks? : Yes! We show that by decomposing our task into classification and grounding, we can compare model's performance on sub-splits of GQA and Flickr30k, and find that our benchmark has a significant gap over these prior benchmarks.<li>
+                        </ul></b>
+               </p>
+            </div>
+
+
+			<h2>
                             Abstract
                         </h2>
                     </center>
