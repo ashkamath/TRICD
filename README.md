@@ -15,14 +15,12 @@ We propose two variations on the CPD task: a grounding formaulation and a VQA fo
 ## Dataset splits
 We use two main image sources:
 1. Winoground : This dataset is also composed of image-caption pairs where the two images and accompnaying texts are semantically similar, often containing the exact same words but in a different ordering for each caption.
-2. MS COCO test dataset: We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for visio-linguistic systems. The two main types of confounding image-text pairs are 
-  a) Those with objects appearing in surprising contexts
-  b) Those where objects appear in surprising relation to one another
+2. MS COCO test dataset: We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for visio-linguistic systems. The two main types of confounding image-text pairs are those with objects appearing in surprising contexts and those where objects appear in surprising relation to one another
 
 Thus we report metrics on 3 dataset splits
-  1) Winoground 
-  2) COCO-obj: COCO images selected for surprising objects
-  3) COCO-rel: COCO image sselected for surpirsing relations
+  * Winoground 
+  * COCO-obj: COCO images selected for surprising objects
+  * COCO-rel: COCO image sselected for surpirsing relations
  
 For a more in-depth discussion of the dataset design and splits please see Sections 3 and 4 of the paper. 
 
