@@ -19,14 +19,23 @@ We use two main image sources:
 
 Thus we report metrics on 3 dataset splits
   * **Winoground** : all Winoground images
-  * **COCO-obj**: COCO images selected for surprising objects
-  * **COCO-rel**: COCO image sselected for surpirsing relations
+  * **COCO objects**: COCO images selected for surprising objects
+  * **COCO relations**: COCO image sselected for surpirsing relations
  
 For a more in-depth discussion of the dataset design and splits please see Sections 3 and 4 of the paper. 
 
 ## Evaluation
 We run inference on the TRICD test and val splits on several current SOTA models. We evaluate 6 systems on the CPD grounding subtask (4 grounding models and 2 open vocabulary detection models) and 3 systems on the VQA subtask. 
 
+### Grounding Performance (Average Precision)
 
+| Model| Winoground | COCO Objects | COCO Relations | All |
+|----------|---------|---------|-----------|----------|
+| MDETR| 75.8 |       45.0 |           80.0 |     72.0 |
+| GLIP-T| 70.6 |         62.7 |           82.2 |     71.7 | 
+| GLIP-L| ** 76.2** | 71.7 | **86.0** |     **77.5** | 
+| FIBER|  74.8 | 68.5 | 85.6 | 76.0| 
+| OWL-VIT| 62.3 | 72.0 | 78.2 |     66.9  | 
+| DETIC| 51.9 |  70.6 | 67.7 |   57.9 | 
 
 
