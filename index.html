@@ -112,9 +112,19 @@ layout: default
                     </ul>
                 </div>
             </div>
-
-            <div class="row">
-                &nbsp
+	 <div class="row justify-content-center">
+                <div class="col-xl-12">
+<!--                     <image src="assets/fiber.png" class="img-fluid" alt="Model"><br> -->
+                    <center>
+                        <h2>
+                            Abstract
+                        </h2>
+                    </center>
+                        <p class="text-justify">
+                        Most traditional benchmarks for computer vision focus on tasks that use a fixed set of labels that are known a priori. On the other hand, tasks like phrase grounding and referring expression comprehension make it possible to probe the model through natural language, which allows us to gain a more extensive understanding of the model's visual understanding capabilities. However, unlike object detection, these free-form text-conditioned box prediction tasks all operate under the assumption that the text corresponds to objects that are necessarily present in the image. We show that results on such benchmarks tend to overestimate the capabilities of models significantly given that models do not necessarily need to understand the context, but merely localize the named entities. In this work we aim to highlight this blind spot in model evaluation by proposing a novel task: 
+   Contextual Phrase Detection (CPD). To evaluate it, we release a human annotated evaluation dataset called TRICD (<b>T</b>esting <b>R</b>obust <b>I</b>mage understanding through <b>C</b>ontextual Phrase <b>D</b>etection, pronounced ``tricked"). It consists of instances of two image-text pairs with bounding boxes for each of the phrases present in the image. The pairs are contextually related, but partially contradictory; i.e. while the images and texts are semantically similar, each sentence is only depicted in one of the images, but not the other. Models must predict the relevant bounding boxes for the phrases in an image if and only if it is in accordance with the context defined by the full sentence. We benchmark the performance of several state of the art multi-modal models on this task in terms of average precision (AP).
+			</p>
+                </div>
             </div>
 	</body>
 </html>
