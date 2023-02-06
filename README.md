@@ -18,9 +18,9 @@ We use two main image sources:
 2. MS COCO test dataset: We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for visio-linguistic systems. The two main types of confounding image-text pairs are those with objects appearing in surprising contexts and those where objects appear in surprising relation to one another
 
 Thus we report metrics on 3 dataset splits
-  * Winoground 
-  * COCO-obj: COCO images selected for surprising objects
-  * COCO-rel: COCO image sselected for surpirsing relations
+  * **Winoground** : all Winoground images
+  * **COCO-obj**: COCO images selected for surprising objects
+  * **COCO-rel**: COCO image sselected for surpirsing relations
  
 For a more in-depth discussion of the dataset design and splits please see Sections 3 and 4 of the paper. 
 
