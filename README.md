@@ -13,7 +13,18 @@ We propose two variations on the CPD task: a grounding formaulation and a VQA fo
 * **CPD VQA** :  This formulation is quite straightforward; a system must simply answer whether or not certain objects or scenes are present in a given image.
 
 ## Dataset splits
-We use two main image sources, Winoground and the MS COCO test dataset. The Winoground dataset is also composed of image-caption pairs where the two images and accompnaying texts are semantically similar, often containing the exact same words but in a different ordering for each caption. For the COCO dataset, we manually annotated and selected image pairs that would be challenging and contextually confusing for visio-linguistic systems. The two main types of confounding iamge-text pairs are 1) those with objects appearing in surprising contexts and 2) where objects appear in surprising relation to one another. Thus we report metrics on 3 dataset splits: 1) Winoground 2) COCO-obj (COCO images selected for surprising objects) and 3) COCO-rel (COCO image sselected for surpirsing relations). For a more in-depth discussion of the dataset design and splits please see Sections 3 and 4 of the paper. 
+We use two main image sources:
+1. Winoground : This dataset is also composed of image-caption pairs where the two images and accompnaying texts are semantically similar, often containing the exact same words but in a different ordering for each caption.
+2. MS COCO test dataset: We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for visio-linguistic systems. The two main types of confounding image-text pairs are 
+  a) Those with objects appearing in surprising contexts
+  b) Those where objects appear in surprising relation to one another
+
+Thus we report metrics on 3 dataset splits
+  1) Winoground 
+  2) COCO-obj: COCO images selected for surprising objects
+  3) COCO-rel: COCO image sselected for surpirsing relations
+ 
+For a more in-depth discussion of the dataset design and splits please see Sections 3 and 4 of the paper. 
 
 ## Evaluation
 We run inference on the TRICD test and val splits on several current SOTA models. We evaluate 6 systems on the CPD grounding subtask (4 grounding models and 2 open vocabulary detection models) and 3 systems on the VQA subtask. 
