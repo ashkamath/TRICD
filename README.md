@@ -57,12 +57,13 @@ We run inference on the TRICD test and val splits on several current SOTA models
 
 
 ### CPD-VQA Sub-Task Performance (F1)
+Models evaluated on this sub-task were fine-tuned on VQAv2.
+
 | Model| Winoground | COCO Objects | COCO Relations | All |
 |----------|---------|---------|-----------|----------|
 | OFA| 54.3 |     71.7 |      67.7 | 62.0  |
 | FIBER| **58.5** |  **75.4** |  **74.7** |  **66.7** | 
 | Flamingo3B| 51.7 |     75.3 |       74.2 | 63.3| 
-| Flamingo80B |  48.2 | 56.4 |  52.3 |  52.1| 
 
 
 
