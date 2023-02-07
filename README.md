@@ -27,7 +27,19 @@ For a more in-depth discussion of the dataset design and splits please see Secti
 ## Evaluation
 We run inference on the TRICD test and val splits on several current SOTA models. We evaluate 6 systems on the CPD grounding subtask (4 grounding models and 2 open vocabulary detection models) and 3 systems on the VQA subtask. 
 
-### Grounding Performance (Average Precision)
+### Conextual Phrase Detection (CPD) Performance (Average Precision)
+
+| Model| Winoground | COCO Objects | COCO Relations | All |
+|----------|---------|---------|-----------|----------|
+| MDETR| 10.1 |       3.9 |     20.4    |     10.7|
+| GLIP-T| 14.7 |       22.5 |     25.1.2 |     16.8| 
+| GLIP-L| 18.1 | 26.9 | 28.6 |     20.1 | 
+| FIBER|  **19.1** | 25.3 | **31.6** | **21.5**| 
+| OWL-VIT| 6.3 | 13.7 | 16.3 |     7.9  | 
+| DETIC| 8.7 |  **27.0** | 19.7 |   11.6 | 
+
+
+### CPD-Grounding Sub-Task Performance (Average Precision)
 
 | Model| Winoground | COCO Objects | COCO Relations | All |
 |----------|---------|---------|-----------|----------|
@@ -39,7 +51,7 @@ We run inference on the TRICD test and val splits on several current SOTA models
 | DETIC| 51.9 |  70.6 | 67.7 |   57.9 | 
 
 
-### VQA Performance (F1)
+### CPD-VQA Sub-Task Performance (F1)
 | Model| Winoground | COCO Objects | COCO Relations | All |
 |----------|---------|---------|-----------|----------|
 | OFA| 54.3 |     71.7 |      67.7 | 62.0  |
