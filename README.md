@@ -6,11 +6,6 @@ CPD is a task that requires models to demonstrate proficiency in both visual obj
 
 TL;DR the dataset consists of instances of image-text pairs (two images and two captions) with bounding boxes for each phrase present in each of the images. The image pairs are contextually related, but partially contradictory: while images and text pairs have semanitc similarities, the phrases or objects in each sentence are only present in one of the images. Crucially, this means there are confirmed negatives in this dataset, allowing for a true dual classification and localization task. For a model to perform well it must refrain from predicting bounding boxes when an object is not present. For a more detailed discussion of the dataset design please see our paper.
 
-## Sub-tasks
-We support evaluation on two sub-tasks of the CPD task, allowing models with different capabilities to measure performance on our challenge:
-
-* **CPD Grounding** : Similar to phrase grounding, for CPD grounding, a model must make bounding box predictions for all annotated phrases within an image caption, where only the positive pairs are evaluated. 
-* **CPD VQA** :  This formulation is quite straightforward; a system must simply answer whether or not certain objects or scenes are present in a given image.
 
 ## Dataset splits
 We use two main image sources:
@@ -23,6 +18,13 @@ Thus we report metrics on 3 dataset splits
   * **COCO relations**: COCO image sselected for surpirsing relations
  
 For a more in-depth discussion of the dataset design and splits please see Sections 3 and 4 of the paper. 
+
+## Sub-tasks
+We support evaluation on two sub-tasks of the CPD task, allowing models with different capabilities to measure performance on our challenge:
+
+* **CPD Grounding** : Similar to phrase grounding, for CPD grounding, a model must make bounding box predictions for all annotated phrases within an image caption, where only the positive pairs are evaluated. 
+* **CPD VQA** :  This formulation is quite straightforward; a system must simply answer whether or not certain objects or scenes are present in a given image.
+
 
 ## Evaluation
 We run inference on the TRICD test and val splits on several current SOTA models. We evaluate 6 systems on the CPD grounding subtask (4 grounding models and 2 open vocabulary detection models) and 3 systems on the VQA subtask. 
