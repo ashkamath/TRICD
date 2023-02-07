@@ -1,0 +1,9 @@
+main:
+  - title: "About"
+    url: /about/
+  - title: '<i class="fa-brands fa-github"></i> Code'
+    url: "https://github.com/ashkamath/TRICD"
+  - title: '<i class="fa-solid fa-file-lines"></i> Paper'
+    url: /assets/paper.pdf
+  - title: '<i class="fa-solid fa-compass"></i>Explore'
+    url: /explore/

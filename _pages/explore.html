@@ -1,0 +1,11 @@
+---
+permalink: /explore/
+title: "Explore"
+---
+This page contains example from the validation set.
+All images come from the <a href="http://cocodataset.org/#explore">COCO dataset</a>.
+The examples are displayed by pairs: each caption is used as a negative for the other image.
+    {% for post in site.posts %}
+        {{ post.content}}
+<div width="100%" style="text-align: center; margin-top: 0px; margin-bottom: 0px;">&nbsp;</div>
+    {% endfor %}
