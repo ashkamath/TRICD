@@ -5,16 +5,16 @@ excerpt: "Testing robust image understanding through contextual phrase detection
 header:
    overlay_color: "#333"
 layout: splash
-feature_row:
-  - image_path: /assets/images/unsplash-gallery-image-3-th.jpg
-    title: "Grounded open-vocabulary detection"
-    excerpt: "We propose a novel task of contextual phrase detection, which subsumes visual grounding and open-vocabulary detection"
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
-    title: "Manually curated"
-    excerpt: "We manually curated a high-quality dataset of more than 2.6k examples."
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
-    title: "Hard negatives"
-    excerpt: "The examples are crafted to be hard for existing methods."
+gallery1:
+   - url: /assets/images/example1.jpg
+     image_path: /assets/images/example1.jpg
+   - url: /assets/images/example2_neg.jpg
+     image_path: /assets/images/example2_neg_cropped.jpg
+gallery2:
+    - url: /assets/images/example1_neg.jpg
+      image_path: /assets/images/example1_neg.jpg
+    - url: /assets/images/example2.jpg
+      image_path: /assets/images/example2_cropped.jpg
 ---
 
 <div class="feature__wrapper" style="text-align: center;">
@@ -81,10 +81,10 @@ feature_row:
 {% include figure image_path="/assets/images/teaser1.png" alt="teaser image" %}
 <p> Current state of the art visual question answering (VQA) systems  display impressive performance on popular benchmarks, however often fail when evaluated on challenging images such as those shown above. We propose a novel task titled 'Contextual Phrase Detection' which evaluates models' fine-grained vision and language understanding capabilities along with a human-labelled dataset (TRICD) that enables evaluation on this novel task. In addition to assessing whether the objects are visible in the scene, models are required to produce bounding boxes to localize them.</p>
 
-{% include figure image_path="/assets/images/example1.jpg" alt="CPD example" %}
-{% include figure image_path="/assets/images/example1_neg.jpg" alt="CPD example" %}
-{% include figure image_path="/assets/images/example2.jpg" alt="CPD example" %}
-{% include figure image_path="/assets/images/example2_neg.jpg" alt="CPD example" %}
+<h1 style="text-align: center;">Examples</h1>
+{% include gallery id="gallery1" caption="# A blue bird next to a red berry" %}
+{% include gallery id="gallery2" caption="# A red bird next to a blue berry" %}
+
 
 <h1 style="text-align: center;">People</h1>
 <div class="feature__wrapper" style="text-align: center;">
