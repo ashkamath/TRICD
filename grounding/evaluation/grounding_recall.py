@@ -111,6 +111,7 @@ def get_recall(gt_data, pred_data,  topk=[1], iou_thresh=0.5):
     table.field_names = ["Recall@k"] + all_cat
 
     score = {}
+    results_df = pd.DataFrame()
     for k, v in results.items():
         cur_results = [v[cat] for cat in all_cat]
         header = "Upper_bound" if k == -1 else f"Recall@{k}"
@@ -119,8 +120,13 @@ def get_recall(gt_data, pred_data,  topk=[1], iou_thresh=0.5):
             score[f"{header}_{cat}"] = v[cat]
         table.add_row([header] + cur_results)
 
-    print(table)
-    return results[topk[0]]
+        df = pd.DataFrame([v])
+        df['metric'] = f'recall@{k}'
+        results_df = pd.concat([results_df, df], axis = 0)
+    
+    results_df = results_df[['metric'] + list(results_df.columns[:-1])]
+    #print(table)
+    return results_df 
 
 
 def get_group_recall(gt_data, pred_data, topk=[1], iou_thresh=0.5):
@@ -227,9 +233,10 @@ def get_group_recall(gt_data, pred_data, topk=[1], iou_thresh=0.5):
     results = recall_tracker.report()
     table = PrettyTable()
     all_cat = sorted(list(results.values())[0].keys())
-    table.field_names = ["Recall@k"] + all_cat
+    table.field_names = ["Group Recall@k"] + all_cat
 
     score = {}
+    results_df = pd.DataFrame()
     for k, v in results.items():
         cur_results = [v[cat] for cat in all_cat]
         header = "Upper_bound" if k == -1 else f"Recall@{k}"
@@ -238,7 +245,12 @@ def get_group_recall(gt_data, pred_data, topk=[1], iou_thresh=0.5):
             score[f"{header}_{cat}"] = v[cat]
         table.add_row([header] + cur_results)
         
-    print(table)
-    return results[topk[0]]
+        df = pd.DataFrame([v])
+        df['metric'] = f'group_recall@{k}'
+        results_df = pd.concat([results_df, df], axis = 0)
+
+    #print(table)
+    results_df = results_df[['metric'] + list(results_df.columns[:-1])]
+    return results_df
 
 

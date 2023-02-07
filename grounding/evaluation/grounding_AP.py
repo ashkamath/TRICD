@@ -544,5 +544,17 @@ def get_AP(data_gt, coco_gt, data_pred) :
     evaluator.accumulate()
     evaluator.summarize()
     result_dict.update({"coco_rel": [evaluator.stats[0]]})
+
+    for k, v in result_dict.items():
+        result_dict[k] = v[0]
     
-    return result_dict
+
+    results_df = pd.DataFrame([result_dict])
+    results_df['metric'] = 'AP'
+    results_df = results_df[['metric'] + list(results_df.columns[:-1])]
+
+    for col in results_df.columns:
+        if results_df[col].iloc[0] == -1:
+            results_df.drop(col, inplace = True, axis = 1)
+
+    return results_df
