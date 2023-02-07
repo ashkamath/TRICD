@@ -1,6 +1,6 @@
 # TRICD: Testing Robust Image Understanding Through Contextual Phrase Detection
 
-This repository contains evaluation code and access to the pubically available validation split for the TRICD dataset. TRICD is designed to probe multimodal (vision & language) systems on the novel task of Contextualized Phrase Detection (CPD) proposed in our accompanying paper.
+This repository contains evaluation code and access to the pubically available validation split for the TRICD dataset. TRICD is designed to probe multimodal (vision & language) systems on the novel task of Contextualized Phrase Detection (CPD) proposed in [our accompanying paper](https://ashkamath.github.io/TRICD/assets/paper.pdf).
 
 CPD is a task that requires models to demonstrate proficiency in both visual object classification (determination of whether or not an object is present in an image) and localization (identification of where, if present, an object appears in the visual scene). Essentially this is an extension of the traditional computer vision task of object detection where the label set is known a priori, to an open vocabulary setting where the model must also take into account the full context of the sentence. This task is distinct from existing benchmarks designed to probe vision and language understanding such as phrase grounding or referring expression comprehension (REC) because these tasks assume objects or scenes described are necessarily present in their accompanying image; it is merely the system's job to identify where (localization). Because of this, models do not necessarily need to understand objects in context. We demonstrate that these benchmarks overestimate model performance in comparison to our newly proposed evaluation benchmark (TRICD). 
 
@@ -12,8 +12,8 @@ A new task that subsumes object detection, phrase grounding and visual question 
 
 ## Dataset splits
 We use two main image sources:
-1. Winoground : This dataset is also composed of image-caption pairs where the two images and accompanying texts are semantically similar, often containing the exact same words but in a different ordering for each caption.
-2. MS COCO test set: We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for vision and language models. The two main types of confounding image-text pairs are those with objects appearing in surprising contexts and those where objects appear in surprising relation to one another.
+1. [Winoground](https://huggingface.co/datasets/facebook/winoground) : This dataset is also composed of image-caption pairs where the two images and accompanying texts are semantically similar, often containing the exact same words but in a different ordering for each caption.
+2. [MS COCO test set](https://cocodataset.org/#home): We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for vision and language models. The two main types of confounding image-text pairs are those with objects appearing in surprising contexts and those where objects appear in surprising relation to one another.
 
 Thus we report metrics on 3 dataset splits
   * **Winoground** : all Winoground images
@@ -32,7 +32,7 @@ We support evaluation on two sub-tasks of the CPD task, allowing models with dif
 ## Baseline evaluation
 We run inference on the TRICD test and val splits on several current SOTA models. We evaluate 6 systems on the CPD grounding subtask (4 grounding models and 2 open vocabulary detection models) and 3 systems on the VQA subtask. 
 
-### Conextual Phrase Detection (CPD) Performance (Average Precision)
+### Contextual Phrase Detection (CPD) Performance (Average Precision)
 
 | Model| Winoground | COCO Objects | COCO Relations | All |
 |----------|---------|---------|-----------|----------|
