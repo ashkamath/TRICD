@@ -32,7 +32,7 @@ We support evaluation on two sub-tasks of the CPD task, allowing models with dif
 ## Baseline evaluation
 We run inference on the TRICD test and val splits on several current SOTA models. We evaluate 6 systems on the CPD grounding subtask (4 grounding models and 2 open vocabulary detection models) and 3 systems on the VQA subtask. 
 
-### Conextual Phrase Detection (CPD) Performance (Average Precision)
+### Contextual Phrase Detection (CPD) Performance (Average Precision)
 
 | Model| Winoground | COCO Objects | COCO Relations | All |
 |----------|---------|---------|-----------|----------|
