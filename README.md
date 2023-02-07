@@ -12,8 +12,8 @@ A new task that subsumes object detection, phrase grounding and visual question 
 
 ## Dataset splits
 We use two main image sources:
-1. Winoground : This dataset is also composed of image-caption pairs where the two images and accompanying texts are semantically similar, often containing the exact same words but in a different ordering for each caption.
-2. MS COCO test set: We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for vision and language models. The two main types of confounding image-text pairs are those with objects appearing in surprising contexts and those where objects appear in surprising relation to one another.
+1. [Winoground](https://huggingface.co/datasets/facebook/winoground) : This dataset is also composed of image-caption pairs where the two images and accompanying texts are semantically similar, often containing the exact same words but in a different ordering for each caption.
+2. [MS COCO test set](https://cocodataset.org/#home): We manually selected and annotated a subset of image pairs from the test split that would be challenging and contextually confusing for vision and language models. The two main types of confounding image-text pairs are those with objects appearing in surprising contexts and those where objects appear in surprising relation to one another.
 
 Thus we report metrics on 3 dataset splits
   * **Winoground** : all Winoground images
