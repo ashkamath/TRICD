@@ -9,7 +9,7 @@ This repository provides access to annotations for the validation split of the T
 * **Average Precision**: standard grounding AP metric 
 
 ## Running inference on the val set
-To evaluate your models on the TRICD validation set, you will need the COCO2017 validation set images and the [TRICD val annotations]() provided in this repository. 
+To evaluate your models on the TRICD validation set, you will need the COCO2017 validation set images and the [TRICD val annotations](https://github.com/ashkamath/TRICD/blob/main/grounding/annotations/TRICD_grounding_val.json) provided in this repository. 
 
 To download the COCO images:
 ```
