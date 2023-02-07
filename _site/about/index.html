@@ -11,7 +11,7 @@
 <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>  TRICD</title>
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+<meta name="description" content="A new task that subsumes object detection, phrase grounding and visual question answering, in which the model must use full context from the given sentence, decide whether this sentence holds true for the given image, and if so, return bounding boxes for all relevant objects referred to in the sentence.">
 
 
 
@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://localhost:4000/about/">
 
 
-  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+  <meta property="og:description" content="A new task that subsumes object detection, phrase grounding and visual question answering, in which the model must use full context from the given sentence, decide whether this sentence holds true for the given image, and if so, return bounding boxes for all relevant objects referred to in the sentence.">
 
 
 
@@ -161,7 +161,7 @@
 
 <ul>
   <li><strong>What is Contextual Phrase Detection (CPD)?</strong> A single task that subsumes object detection, phrase grounding and visual question answering, in which the model must use full context from the given sentence, decide whether this sentence holds true for the given image, and if so, return bounding boxes for all relevant objects referred to in the sentence.</li>
-  <li><strong>How is the TRICD dataset different from other benchmarks?</strong> : We manually curate image-text pairs with bounding boxes for each of the phrases present in the image. The pairs are contextually related, but partially contradictory; i.e. while the images and texts are semantically similar, each sentence is only depicted in one of the images, but not the other. We manually verify and ensure the negatives.</li>
+  <li><strong>How is the TRICD dataset different from other benchmarks?</strong> We manually curate image-text pairs with bounding boxes for each of the phrases present in the image. The pairs are contextually related, but partially contradictory; i.e. while the images and texts are semantically similar, each sentence is only depicted in one of the images, but not the other. We manually verify and ensure the negatives.</li>
   <li><strong>But is it really that much harder than existing classification and grounding benchmarks?</strong>  Yes! We show that by decomposing our task into classification and grounding, we can compare model’s performance on sub-splits of GQA and Flickr30k, and find that our benchmark has a significant gap over these prior benchmarks.</li>
   <li><strong>What is the metric that is used?</strong> We compute Average Precision as is common in object detection literature.</li>
   <li><strong>Where do the images come from?</strong> We use two data distributions - COCO and Winoground as our pool of images from which we build our dataset.</li>
