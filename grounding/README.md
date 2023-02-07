@@ -8,6 +8,24 @@ This repository provides access to annotations for the validation split of the T
 
 * **Average Precision**: standard grounding AP metric 
 
+## Running inference on the val set
+To evaluate your models on the TRICD validation set, you will need the COCO2017 validation set images and the [TRICD val annotations]() provided in this repository. 
+
+To download the COCO images:
+```
+wget http://images.cocodataset.org/zips/val2017.zip 
+unzip -q val2017.zip -d <your-image-directory>
+```
+
+To access annotations file in python
+```
+import requests
+url = 'https://raw.githubusercontent.com/ashkamath/TRICD/main/grounding/annotations/TRICD_grounding_val.json?token=GHSAT0AAAAAAB55UT7JRLYIBTGYB6HZEILGY7BKNXA'
+phrase_det_anns = json.loads(requests.get(url).text)
+```
+
+
+
 ## Expected Results Format
 Predictions are expected in the following nested json format where each image_id is a top-level key. Each image should have a list of scores, bounding box predictions
 and phrase_id predictions.  The introduction of phrase IDs is the main difference between this and standard grounding results output. The list of phrase IDs identify which positive phrase in a caption a bounding box and score are associated to. 
