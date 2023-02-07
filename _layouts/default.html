@@ -23,13 +23,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
-  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+ document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css"></noscript>
+
+
+<style>
+
+ .feature__item2 { position: relative; margin-bottom: 2em; font-size: 22px; }
+ @media (min-width: 30em) { .feature__item2 { float: left; margin-bottom: 0; width: 18.5%; clear:none;}
+</style>
 
 {% if site.head_scripts %}
   {% for script in site.head_scripts %}
